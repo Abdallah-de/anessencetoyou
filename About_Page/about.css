@@ -1,0 +1,189 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(../assets/photos/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;    
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background:whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar .fa {
+    margin-right: 8px;
+}
+
+.SubMenu {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar ul li:hover .SubMenu {
+    display: block;
+    position: absolute;
+    margin-top: 1px;
+    margin-left: -40px;
+}
+
+.navbar ul li:hover .SubMenu ul {
+  display: block;
+  margin: 10px;
+  bottom: -10px;
+}
+
+.navbar ul li:hover .SubMenu ul li {
+  width: max-content;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  transition: 0.5s;
+  z-index: 1;
+  content: '';
+  height: 3px;
+}
+
+.container1{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    color: whitesmoke;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 100px;
+    transition: 0.5s;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #FF9900;
+}
+
+.content h1:hover {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.row {
+    margin: auto;
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+.container {
+    flex-basis: 30%;
+    background: whitesmoke;;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: transform 0.5s;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    flex-wrap: wrap;
+}
+
+.container h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    font-family: DHF_Story_Brush_Slanted;
+    font-size: 30px;
+}
+
+.container p {
+    font-weight: 600;
+    margin: 10px 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    justify-content: center;
+    text-align: justify;
+}
+
+.container:hover {
+    box-shadow: 0 0 20px 0px rgb(255, 254, 254);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#696969), to(#fff));
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(to right, #201c29, #201c29 1px, #100e17 1px, #100e17);
+}    
